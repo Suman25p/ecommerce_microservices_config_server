@@ -7,11 +7,9 @@ spring:
 
     consumer:
       group-id: notification-group
-
       auto-offset-reset: earliest
 
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
 
       properties:
@@ -23,8 +21,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-       register-with-eureka: true
+
+    register-with-eureka: true
     fetch-registry: true
+
   instance:
     prefer-ip-address: true
 
