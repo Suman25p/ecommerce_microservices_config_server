@@ -50,7 +50,7 @@ logging:
 resilience4j:
   circuitbreaker:
     instances:
-      productService:
+      paymentService:
         slidingWindowSize: 5
         minimumNumberOfCalls: 5
         failureRateThreshold: 50
